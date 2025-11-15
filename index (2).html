@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALERT PUBLISHING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+</head>
+
+<body bgcolor="silver">
+
+<div id="container">
+
+<marquee behavior="alternate">
+    <font face="Comic Sans" size="6" color="blue">
+        <h2><center>Biglang Pogi &nbsp;&nbsp; Barber Shop</center></h2>
+    </font>
+</marquee>
+
+<center>
+    <font face="Comic Sans" size="6" color="red">
+        <h3><i>Quality HairCut</i></h3>
+    </font>
+</center>
+
+<div id="banner-fade">
+    <center>
+        <img src="taper.jpg" width="300" height="200" title="HairCut 1 - Low Taper Fade - Price Php 100">
+        <img src="low fade.jpg" width="300" height="200" title="HairCut 2 - Low Fade - Price Php 100">
+        <img src="71XoNjFgvGL._UF1000,1000_QL80_.jpg" width="300" height="200" title="My Company">
+        <img src="burst fade.jfif" width="300" height="200" title="HairCut 3 - Low Burst Fade - Price Php 100">
+        <img src="edgar cut.jpg" width="300" height="200" title="HairCut 4 - Edgar Cut - Price Php 100">
+    </center>
+</div>
+
+<script class="secret-source">
+    jQuery(document).ready(function($) {
+        $('#banner-fade').bjqs({
+            height : 320,
+            width  : 620,
+            responsive : true
+        });
+    });
+</script>
+
+<h1><center><font face="Verdana" size="2" color="#666666"></font></center></h1>
+
+<center>
+    <a href="https://www.youtube.com/watch?v=oz0pgf9ZCDY ">Low Taper Fade</a> | 
+    <a href="https://www.youtube.com/watch?v=9osm03jLZBw">Low Fade</a> | 
+    <a href="https://www.youtube.com/watch?v=KZWAvQDLVWk">Low Burst Fade</a> | 
+    <a href="https://www.youtube.com/watch?v=TA2FtVW6KGg">Edgar Cut</a>
+</center>
+
+<p></p>
+<center>
+    <font face="Comic Sans" size="4" color="green">
+        357 Coral Street Tondo Manila Cell Number 09104051491
+    </font>
+    <br>
+    <font face="Verdana" size="2" color="#666666">
+        <p>Copyright © 2025 All rights reserved.</p>
+    </font>
+</center>
+
+</div>
+</body>
+</html>
+
+<!-- ********** slide ********** -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ALERT PUBLISHING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/bjqs-1.3.min.js"></script>
+    <style>
+        /* Basic styling for the new sections */
+        .haircut-selection {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .haircut-selection label {
+            display: inline-block;
+            margin: 10px;
+            font-family: Comic Sans, sans-serif;
+            font-size: 18px;
+        }
+        .order-form {
+            display: none; /* Hidden initially */
+            margin: 20px auto;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-family: Comic Sans, sans-serif;
+        }
+        .order-form input, .order-form select, .order-form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        .order-form button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .order-form button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body bgcolor="silver">
+
+<div id="container">
+
+<marquee behavior="alternate">
+    <font face="Comic Sans" size="6" color="blue">
+        <h2><center> Choose Your Haircut &nbsp;&nbsp;</center></h2>
+    </font>
+</marquee>
+
+
+<script class="secret-source">
+    jQuery(document).ready(function($) {
+        $('#banner-fade').bjqs({
+            height : 320,
+            width  : 620,
+            responsive : true
+        });
+    });
+</script>
+
+<h1><center><font face="Verdana" size="2" color="#666666"></font></center></h1>
+
+<p></p>
+
+<!-- New Section: Choose a Haircut -->
+<div class="haircut-selection">
+    <h3><font face="Comic Sans" size="5" color="blue">Pay First Before You Get Your HairCut</font></h3>
+    <form id="haircutForm">
+        <label><input type="radio" name="haircut" value="Low Taper Fade - Php 100"> Low Taper Fade - Php 100</label>
+        <label><input type="radio" name="haircut" value="Low Fade - Php 100"> Low Fade - Php 100</label>
+        <label><input type="radio" name="haircut" value="Low Burst Fade - Php 100"> Low Burst Fade - Php 100</label>
+        <label><input type="radio" name="haircut" value="Edgar Cut - Php 100"> Edgar Cut - Php 100</label>
+        <br>
+        <button type="button" onclick="proceedToOrder()">Proceed to Place Order</button>
+    </form>
+</div>
+
+<!-- New Section: Order Form (Hidden Initially) -->
+<div class="order-form" id="orderForm">
+    <h3><font face="Comic Sans" size="5" color="red">Place Your Order</font></h3>
+    <form id="orderDetailsForm" onsubmit="submitOrder(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">Email (Optional):</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+        
+        <label for="selectedHaircut">Selected Haircut:</label>
+        <input type="text" id="selectedHaircut" name="selectedHaircut" readonly>
+        
+        <button type="submit">Submit Order</button>
+    </form>
+</div>
+
+<script>
+    function proceedToOrder() {
+        const selectedHaircut = document.querySelector('input[name="haircut"]:checked');
+        if (!selectedHaircut) {
+            alert("Please select a haircut first!");
+            return;
+        }
+        document.getElementById('selectedHaircut').value = selectedHaircut.value;
+        document.getElementById('orderForm').style.display = 'block';
+        document.getElementById('haircutForm').style.display = 'none';
+    }
+
+    function submitOrder(event) {
+        event.preventDefault();
+        // In a real application, you'd send this data to a server.
+        // For now, just show an alert.
+        alert("Order submitted! We'll contact you soon.");
+        // Reset forms
+        document.getElementById('haircutForm').reset();
+        document.getElementById('orderDetailsForm').reset();
+        document.getElementById('orderForm').style.display = 'none';
+        document.getElementById('haircutForm').style.display = 'block';
+    }
+</script>
+
+
+</div>
+</body>
+</html>
+
+<!-- ********** slide ********** -->
+
